@@ -53,7 +53,7 @@ export function deleteHousesRent(): void{
   }
 }
 
-  //FUNCTION TO BUY A HOUSE AS A CLIENT
+
 
   //FUNCTION TO SEE CONTRACT OWNER
 export function getOwner(): string {
@@ -64,8 +64,6 @@ export function getOwner(): string {
 //FUNCTION TO SELL A HOUSE AS A CLIENT 
 export function buyHouse(houseIndex: i32): bool {
   let valor =   u128.from('10000000000000000000000000'); 
-
-
   if(housesInStock.length==0){
     logging.log("No hay casas registradas")
     return false
@@ -93,8 +91,8 @@ export function rentHouse(houseRentIndex: i32): bool {
     logging.log("No existe la casa")
     return false
   }else{
-    housesInStockRent[houseRentIndex].setOwner();
-    housesInStockRent[houseRentIndex].setStatusSold();
+    housesInStockRent[houseRentIndex].ownerRent = context.sender;
+    housesInStockRent[houseRentIndex].statusRent = 1;
     logging.log(housesInStockRent[houseRentIndex]);
     assert(context.attachedDeposit >= valor  , 'Es necesario adjuntar 10 NEAR')
     return true

@@ -80,18 +80,6 @@ export class HouseRent{
     this.initialCost = initialCostArgRent;
 
   }
-
-  setStatusSold(): bool {
-    this.statusRent = 1
-    return true
-  }
-  setStatusInStock(): bool {
-    this.statusRent = 0
-    return true
-  }
-  setOwner():void {
-    this.ownerRent = context.sender;
-  }
 }
 export const ONE_NEAR = u128.from('10000000000000000')
 export const housesInStock = new PersistentVector<House>("m")
