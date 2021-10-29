@@ -43,13 +43,9 @@ Step 3: Clonar Repositorio
 Este comando nos permite clonar el repositorio de nuestro proyecto 
 
 ```bash
-git clone https://github.com/noemk2/holamundo_as.git
+https://github.com/EdwardsVO/habitar-near-blockchain.git
 ```
 
-Una vez que hayas descargado el repositorio, asegurate de ejecutar los comandos dentro del repositorio descargado. Puedes hacerlo con
-```bash
-cd holamundo_as/
-```
 
 Step 4: Realiza el BUILD para implementación de desarrollo de contrato inteligente 
 ------------------------------------------------------------------------------------
