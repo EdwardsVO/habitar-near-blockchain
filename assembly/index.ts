@@ -15,23 +15,60 @@
 import { context, Context, logging, storage } from 'near-sdk-as';
 import { House, housesInStock } from './models'
 
-const getIndex = housesInStock.length; //FOR INDEX 
+
+
 const contractOwner = context.sender; //SECURITY VALIDATION
+const housesInStockNumIndex = housesInStock.length;
 
 
 //FUNCTION TO MINT A NEW HOUSE -- ONLY CONTRACT OWNER
 export function createHouse(price: number, description: string): House {
-  const newHouse = new House(price, description, getIndex); //SEARCHING PURPOSE
+  const newHouse = new House(price, housesInStockNumIndex, description); //SEARCHING PURPOSE
   housesInStock.push(newHouse);
   logging.log(newHouse) //DEBUGGING
   return newHouse
 }
 
-//FUNCTION TO BUY A HOUSE AS A CLIENT
+//FUNCTION TO REMOVE ALL HOUSES
+export function deleteHouses(): void{
+  while(housesInStock.length > 0) {
+    housesInStock.pop();
+  }
+}
+
+  //FUNCTION TO BUY A HOUSE AS A CLIENT
+
+  //FUNCTION TO SEE CONTRACT OWNER
+export function getOwner(): string {
+  return contractOwner;
+}
 
 
 //FUNCTION TO SELL A HOUSE AS A CLIENT 
+export function buyHouse(houseIndex: i32): bool {
+  
+  if(!housesInStock[houseIndex]){
+    logging.log("No existe la casa")
+    return false
+  }
+  housesInStock[houseIndex].setOwner();
+  housesInStock[houseIndex].setStatusSold();
+  logging.log(housesInStock[houseIndex]);
+  return true
+}
+
+//GET HOUSES NUMBER
+export function getNumHouses(): number{
+  return housesInStockNumIndex;
+}
 
 //GET HOUSES
+export function getHouses(): House[] {
+  const result = new Array<House>(housesInStockNumIndex);
+  for(let i = 0; i < housesInStockNumIndex; i++) {
+    result[i] = housesInStock[i];
+  }
+  return result;
+}
 
 //GET CONTRACT MONEY
