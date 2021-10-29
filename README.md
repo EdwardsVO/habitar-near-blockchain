@@ -1,6 +1,3 @@
-Hola mundo en near con AssemblyScript
-==================
-
 Introducción a Habitar
 ==================
 
