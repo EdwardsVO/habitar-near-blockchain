@@ -39,6 +39,7 @@ export class House {
   }
 }
 
+@nearBindgen
 export class HouseRent{  
  
   priceRent: number;
