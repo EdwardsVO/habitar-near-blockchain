@@ -13,5 +13,8 @@
 	"license": "ISC",
 	"devDependencies": {
 		"near-sdk-as": "^3.2.3"
+	},
+	"dependencies": {
+		"date-and-time": "^2.0.1"
 	}
 }
