@@ -116,7 +116,7 @@ Las pruebas son parte del desarrollo, luego, para ejecutar las pruebas en el con
 
     yarn test
 
-
+Puedes visualizar una aproximación al diseño visual de la aplicación mediante :https://drive.google.com/file/d/1qqLefP4RpZrzsf6rmLukzSBbc6D3Nky0/view?usp=sharing
 ==============================================
 
   [create-near-app]: https://github.com/near/create-near-app
@@ -125,6 +125,5 @@ Las pruebas son parte del desarrollo, luego, para ejecutar las pruebas en el con
   [NEAR Wallet]: https://wallet.testnet.near.org/
   [near-cli]: https://github.com/near/near-cli
   [NEAR test account]: https://docs.near.org/docs/develop/basics/create-account#creating-a-testnet-account
-  [nvm]: https://github.com/nvm-sh/nvm
-  [UX/UI]: https://www.figma.com/proto/GqP5EF5zRZRvAv3HoaSsuN/uniwap?node-id=39%3A2300&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=39%3A2300&hide-ui=1
-  [UX/UI]: https://www.figma.com/proto/0dZLC0WI1eVsfjeKu3T8J8/Garant%C3%ADzame?node-id=2%3A8&scaling=scale-down-width&page-id=0%3A1&starting-point-node-id=2%3A8
+ 
+  
