@@ -1,10 +1,20 @@
 Hola mundo en near con AssemblyScript
 ==================
 
-Introducción a holamundo en near (assemblyScript)
+Introducción a Habitar
 ==================
 
- un holamundo en near protocol, este contrato te perminte:
+Habitar es un contrato inteligente que permite verificar la identidad de los dueños de propiedades inmuebles. Debido a que la tecnología blockchain permite validar esa propiedad para que no sea posible una falsificaciín de documentos de propiedad o una alteración anormal del valor del inmueble. 
+las funcionalidades principales del contrato son:
+
+1. Crear una propiedad (inmueble)
+2. Obtener el propietaerio del inmueble
+3. Eliminar dicha propiedad
+4. Comprar la propiedad
+5. Crear propiedades para arrendar
+6. Arrendar una propiedad
+
+ 
  
  1. print "Hello world" 
  2. print "Hello " + $USER
@@ -68,26 +78,46 @@ usarlo más tarde)
 ¡Felicitaciones, ahora tendrá un entorno de desarrollo local ejecutándose en NEAR TestNet!
 
 
-✏️ Comando  view : request estatico
------------------------------------------------
-
-Permite imprimir "Hello world" 
-
-Para Linux:
-```bash
-near view <your deployed contract> hello_world --account-id <username>.testnet
-```
-
-✏️ Comando  call : request dinamicop
+✏️ Explorando los métodos del contrato inteligente 
 --------------------------------------------
-
-Permite imprimir "Hello " + <username> .testnet  
+los siguientes comandos permiten ejecutar el contrato y realizar cambios en él:
 
 Para Linux :
+comando para crear una propiedad
+
 ```bash
-near call <your deployed contract> hello --account-id <username>.testnet
+near call <your deployed contract> createHouse '{"price": number, "description": string, "location": string, "rooms": number, "toilets": number, "size": number}' --account-id <username>.testnet --deposit amount
 ```
 
+comando para crear una propiedad para alquiler
+
+```bash
+near call <your deployed contract> createHouse '{"initialCost":number, "price": number, "description": string, "location": string, "rooms": number, "toilets": number, "size": number}' --account-id <username>.testnet --deposit amount
+```
+
+comando para obtener la cantidad de casas registradas
+
+```bash
+near call <your deployed contract> getHouses --account-id <username>.testnet
+```
+
+comando para obtener el listado de casas registradas
+
+```bash
+near call <your deployed contract> getNumHouses --account-id <username>.testnet
+```
+
+comando para obtener la cantidad de casas registradas destinadas al alquiler
+
+```bash
+near call <your deployed contract> getNumHousesRent --account-id <username>.testnet
+```
+
+comando para obtener el listado de casas registradas destinadas al alquiler
+
+```bash
+near call <your deployed contract> getHousesRent --account-id <username>.testnet
+```
 
 🤖 Test 
 ==================
