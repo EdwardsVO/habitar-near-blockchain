@@ -39,38 +39,44 @@ export class House {
   }
 }
 
-export class HouseRent{  owner: string;
+export class HouseRent{  
+ 
   priceRent: number;
   statusRent: number; 
+
   indexRent: number;
   descriptionRent: string;
   locationRent: string;
+
   roomsRent: number;
   toiletsRent: number;
   sizeRent: number;   
+
   dateStartRent: string;
   dateEndRent: string;
   initialCost: number;
   ownerRent: string; 
-  dateStart: string;
-  dateEnd: string;
 
-  constructor (public initialCostArgRent: number,  dateStartArg: string, dataEndArg: string, public priceArgRent: number,
+
+  constructor (public initialCostArgRent: number,  dateStartArg: string, public priceArgRent: number,
      indexArgRent: number, descriptionArgRent: string, locationArgRent: string, roomsArgRent: number, toiletsArgsRent: number, 
      sizeArgsRent: number ){
       this.priceRent = priceArgRent;
       this.ownerRent = context.sender;
       this.descriptionRent = descriptionArgRent;
+
       this.statusRent = 0;
       this.indexRent = indexArgRent;
       this.descriptionRent = descriptionArgRent;
+
       this.locationRent = locationArgRent;
       this.roomsRent = roomsArgRent;
       this.toiletsRent = toiletsArgsRent;
+
       this.sizeRent = sizeArgsRent
-      this.ownerRent = context.sender;
-    this.dateStart = dateStartArg;
-    this.dateEnd = dataEndArg;
+    this.dateStartRent = dateStartArg;
+    this.dateEndRent = ' ';
+
     this.initialCost = initialCostArgRent;
 
   }
