@@ -12,10 +12,7 @@ las funcionalidades principales del contrato son:
 6. Arrendar una propiedad
 
  
- 
- 1. print "Hello world" 
- 2. print "Hello " + $USER
- 
+
 
 👨‍💻 Instalación en local
 ===========
