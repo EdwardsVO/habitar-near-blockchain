@@ -1,7 +1,7 @@
 Introducción a Habitar
 ==================
 
-Habitar es un contrato inteligente que permite verificar la identidad de los dueños de propiedades inmuebles. Debido a que la tecnología blockchain permite validar esa propiedad para que no sea posible una falsificaciín de documentos de propiedad o una alteración anormal del valor del inmueble. 
+Habitar es un contrato inteligente que permite verificar la identidad de los dueños de propiedades inmuebles. Debido a que la tecnología blockchain permite validar esa propiedad para que no sea posible una falsificación de documentos de propiedad o una alteración anormal del valor del inmueble. 
 las funcionalidades principales del contrato son:
 
 1. Crear una propiedad (inmueble)
