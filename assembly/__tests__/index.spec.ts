@@ -1,4 +1,4 @@
-import { createHouse, buyHouse, getHouses, getNumHouses, getOwner, getNumHousesrent, rentHouse, getHousesRent } from "..";
+import { createHouse, buyHouse, getHouses, getNumHouses, getOwner, getNumHousesRent, rentHouse, getHousesRent } from "..";
 import { context, Context, logging } from "near-sdk-as";
 import { House, HouseRent, housesInStock, housesInStockRent } from "../models";
 

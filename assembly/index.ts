@@ -1,17 +1,3 @@
-/*
- * This is an example of an AssemblyScript smart contract with two simple,
- * symmetric functions:
- *
- * 1. setGreeting: accepts a greeting, such as "howdy", and records it for the
- *    user (account_id) who sent the request
- * 2. getGreeting: accepts an account_id and returns the greeting saved for it,
- *    defaulting to "Hello"
- *
- * Learn more about writing NEAR smart contracts with AssemblyScript:
- * https://docs.near.org/docs/develop/contracts/as/intro
- *
- */
-
 import { context, Context, logging, storage, u128 } from 'near-sdk-as';
 import { House, HouseRent, housesInStock, housesInStockRent, ONE_NEAR } from './models'
 
@@ -105,7 +91,8 @@ export function getNumHouses(): number{
   return housesInStockNumIndex;
 }
 
-export function getNumHousesrent(): number{
+
+export function getNumHousesRent(): number{
   return housesInStockRentNumIndex;
 }
 
@@ -125,5 +112,3 @@ export function getHousesRent(): HouseRent[] {
   }
   return result;
 }
-
-//GET CONTRACT MONEY

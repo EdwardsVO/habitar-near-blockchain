@@ -84,4 +84,4 @@ export class HouseRent{
 }
 export const ONE_NEAR = u128.from('10000000000000000')
 export const housesInStock = new PersistentVector<House>("m")
-export const housesInStockRent = new PersistentVector<HouseRent>("m")
+export const housesInStockRent = new PersistentVector<HouseRent>("v")
